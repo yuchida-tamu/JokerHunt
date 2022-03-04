@@ -10,6 +10,7 @@ public class UICoolDown : MonoBehaviour
     [SerializeField] TMP_Text cooldownText;
     [SerializeField] Image overlay;
     float cooldown;
+    float maxBullets = 4;
 
     private bool isCoolingDown = false;
 
