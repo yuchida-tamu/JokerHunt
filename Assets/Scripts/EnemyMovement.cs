@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
-    private int currentTile = 4;
+    private int currentTile = 5;
     [SerializeField] GameObject[] map;
     // Start is called before the first frame update
     void Start()
