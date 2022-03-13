@@ -3,7 +3,6 @@ using UnityEngine.UI;
 
 public class PlayerBattleControl : MonoBehaviour
 {
-
     private int currentTile = 5;
     private float basicTimeStamp;
     private bool isCooldownStarted = false;
@@ -12,7 +11,7 @@ public class PlayerBattleControl : MonoBehaviour
     //use the SerializeField attribute when you need your variable to be private 
     //but also want it to show up in the Editor.
     [SerializeField] float basicAttackCooldown = 5f;
-    [SerializeField] GameObject[] map;
+   [SerializeField] GameObject[] map;
     [SerializeField] GameObject basicAttackProjectile;
     [SerializeField] Transform player;
     [SerializeField] int maxBullets = 4;
@@ -77,35 +76,34 @@ public class PlayerBattleControl : MonoBehaviour
             if((currentTile + 1) % 4 != 0){
                 currentTile += 1;
             }
- 
         }
-
         //move DOWN
         if (Input.GetKeyDown(KeyCode.S)){
            if(currentTile % 4 != 0 ){
                 currentTile -= 1;
             }
         }
-
         //move LEFT
         if (Input.GetKeyDown(KeyCode.A)){
             if(currentTile > 3){
                 currentTile -= 4;
             } 
         }
-
         //move RIGHT
         if (Input.GetKeyDown(KeyCode.D)){
             if(currentTile < 11){
                 currentTile += 4;
             }
-        }
+        }/**/
+
+
         UpdatePosition();
     }
 
     void UpdatePosition(){
+        //Vector3 updatedPosition = map[currentTile].transform.position;
         Vector3 updatedPosition = map[currentTile].transform.position;
-        player.transform.position =new Vector3(updatedPosition.x, updatedPosition.y,  -5) ;
+        player.transform.position = new Vector3(updatedPosition.x, updatedPosition.y,  -5) ;
     }
     
 
@@ -128,5 +126,5 @@ public class PlayerBattleControl : MonoBehaviour
         bulletsUI.updateColorRed(bulletCount);
 
     }
-    
+
 }
