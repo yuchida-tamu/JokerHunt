@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class PlayerBattleControl : MonoBehaviour
 {
 
-    private int currentTile = 5;
+    [SerializeField] int currentTile = 5;
     private float basicTimeStamp;
     private bool isCooldownStarted = false;
     private int bulletCount;
@@ -66,7 +66,7 @@ public class PlayerBattleControl : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R)){
             reload();
         }
-
+        
     }
 
 
@@ -74,16 +74,16 @@ public class PlayerBattleControl : MonoBehaviour
     void UpdateMovement(){
         if (Input.GetKeyDown(KeyCode.W)){
             // go upward only if there is a tile available
-            if((currentTile + 1) % 4 != 0){
-                currentTile += 1;
+            if(currentTile % 4 != 0){
+                currentTile -= 1;
             }
- 
+      
         }
 
         //move DOWN
         if (Input.GetKeyDown(KeyCode.S)){
-           if(currentTile % 4 != 0 ){
-                currentTile -= 1;
+           if((currentTile +1) % 4 != 0 ){
+                currentTile += 1;
             }
         }
 
@@ -96,7 +96,7 @@ public class PlayerBattleControl : MonoBehaviour
 
         //move RIGHT
         if (Input.GetKeyDown(KeyCode.D)){
-            if(currentTile < 11){
+            if(currentTile < 12){
                 currentTile += 4;
             }
         }
@@ -105,7 +105,7 @@ public class PlayerBattleControl : MonoBehaviour
 
     void UpdatePosition(){
         Vector3 updatedPosition = map[currentTile].transform.position;
-        player.transform.position =new Vector3(updatedPosition.x, updatedPosition.y,  -5) ;
+        player.transform.position =new Vector3(updatedPosition.x, 1,  updatedPosition.z) ;
     }
     
 

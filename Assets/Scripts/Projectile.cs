@@ -7,22 +7,22 @@ public class Projectile : MonoBehaviour
     
    [SerializeField] int damage = 10;
     [SerializeField] float speed = 20f;
-    [SerializeField] Rigidbody2D rb;
+    [SerializeField] Rigidbody rb;
     private void Start()
     {
-        rb.velocity = transform.up * speed;
+        rb.velocity = transform.right  * speed;
     }
 
-     void OnTriggerEnter2D(Collider2D hitInfo)
+     void OnTriggerEnter(Collider hitInfo)
     {
 
         EnemyState enemy = hitInfo.GetComponent<EnemyState>();
-        Debug.Log(hitInfo);
         if (enemy != null) 
         {
+        Debug.Log(enemy);
             enemy.TakeDamage(damage);
+            Destroy(gameObject);
         }
-        Destroy(gameObject);
     }
 
     private void OnBecameInvisible()
