@@ -11,7 +11,7 @@ public class PlayerBattleControl : MonoBehaviour
     //use the SerializeField attribute when you need your variable to be private 
     //but also want it to show up in the Editor.
     [SerializeField] float basicAttackCooldown = 5f;
-   [SerializeField] GameObject[] map;
+    [SerializeField] GameObject[] map;
     [SerializeField] GameObject basicAttackProjectile;
     [SerializeField] Transform player;
     [SerializeField] int maxBullets = 4;

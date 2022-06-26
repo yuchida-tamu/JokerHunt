@@ -93,7 +93,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5860584620969431418}
-  - component: {fileID: 5860584620969431417}
   - component: {fileID: 5860584620969431416}
   m_Layer: 0
   m_Name: Player
@@ -118,30 +117,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5860584620969431417
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5860584620969431419}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e253935b809763247a22479687defff3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  map:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  player: {fileID: 5860584620969431418}
-  basicAttackProjectile: {fileID: 8139192198739426381, guid: 07161cdbab7007945a230c078bb400d6, type: 3}
 --- !u!114 &5860584620969431416
 MonoBehaviour:
   m_ObjectHideFlags: 0

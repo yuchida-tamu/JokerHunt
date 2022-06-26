@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class gameWorldPlaterControl : MonoBehaviour{
+public class gameWorldPlayerControl : MonoBehaviour{
     public CharacterController controller;
-    [SerializeField] float speed = 6f;
+    [SerializeField] float speed = 14f;
 
     // Update is called once per frame
     void Update(){
